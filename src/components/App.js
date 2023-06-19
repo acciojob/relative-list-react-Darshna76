@@ -1,11 +1,18 @@
 import React from 'react'
-import RelativeList from './RellativieList'
 
+
+const relatives=["John","Emily","Michael","Tata","Sophia","Alex"]
 const App = () => {
   return (
     <div id="main">
                {/* Do not remove the main div */}
-               <RelativeList/>
+               <ol key={'relativeList'}>
+                  {relatives.map((item,index)=>{
+                    return <li key={`relativeListItem${index+1}`}>
+                      {item}
+                    </li>
+                  })}
+               </ol>
     </div>
   )
 }
